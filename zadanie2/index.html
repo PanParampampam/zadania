@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class= 'game'>
+            <div id = 'home'>
+                <canvas id='mycanvas' width='350' height='350'>
+                </canvas>
+            </div> 
+        </div>
+
+        <div class="board">
+            <p id="score"></p>
+            <p id="scoreFinal"></p>
+            <p id="scoreBoard"></p>
+        </div>
+        
+        <div class="settings" id="settings--js">
+            <p>Wybierz poziom od 1 do 5 (plansze od 2 do 5 dają dodatkowe punkty)</p>
+            <input type="text" id="select-stage" value="1">
+            
+            <p>Ustaw pomniejszenie węża - <span style="color: blue;">jagoda</span></p>
+            <input type="text" id="select-powerUp1" value="1">
+            
+            <p>Ustaw powiększenie węża - <span style="color: greenyellow;">limonka</span></p>
+            <input type="text" id="select-powerUp2" value="1">
+            
+            <p>Ustaw czas przyspieszenia węża (w sekundach) - <span style="color: purple;">winogrono</span></p>
+            <input type="text" id="select-powerUp3" value="5">
+            
+            <p>Ustaw czas spowolnienia węża (w sekundach) - <span style="color: orange;">pomarańcza</span></p>
+            <input type="text" id="select-powerUp4" value="5">
+            
+            <p>Ustaw ilość dodatkowych punktów - <span style="color: darkred;">wiśnia</span></p>
+            <input type="text" id="select-powerUp5" value="3">
+            
+            <p>Ustaw czas nietykalności (w sekundach) - <span style="color: chocolate;">grzybek</span></p>
+            <input type="text" id="select-powerUp6" value="10">
+            
+            <p>Ustaw prędkość węża</p>
+                <input type="radio" id="select-speed1" name="speed"> Normalny (1 punkt za jabłko)
+                <input type="radio" id="select-speed2" name="speed"> Szybki (2 punkty)
+                <input type="radio" id="select-speed3" name="speed"> Bardzo szybki (3 punkty)
+
+            <button id='btn'>START</button>
+        </div>
+
+
+        <script src="js/settings.js"></script>
+        <script src="js/draw.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>

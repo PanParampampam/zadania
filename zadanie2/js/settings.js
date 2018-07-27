@@ -1,0 +1,26 @@
+
+var mycanvas = document.getElementById('mycanvas');
+var ctx = mycanvas.getContext('2d');
+var snakeSize = 10; 
+var width = 350;
+var height = 350;
+var score = 0;
+var stageMultiplier = 1;
+var scoreBoard = [];
+var stage = 1;
+var snake;
+var food;
+var powerUpCounter = 0;
+var powerUp1 = 1;
+var powerUp2 = 1;
+var powerUp3 = 5;
+var powerUp4 = 5;
+var powerUp5 = 3;
+var powerUp6 = 10;
+var speed1 = 70;
+var speed2 = 50;
+var speed3 = 30;
+var currentSpeed = 70;
+var speedMultiplier = 0;
+var immunity = false;
+var userSettings = document.getElementById("settings--js");

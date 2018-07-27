@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html  lang="pl" xml:lang="pl">
+<head id="head">
+    <title>Predictes</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='index.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header__wrapper">
+
+            <div class="header__logo">
+                <img src="images/logo.png" alt="logo"/>
+            </div>
+
+            <button class="hamburger" id="hamburger--js" onclick="mobileMenuSwitch()">
+                <span class="hamburger__top"></span>
+                <span class="hamburger__middle"></span>
+                <span class="hamburger__bottom"></span>
+            </button>
+
+            <div class="header__content" id="header__content--js">
+
+                <div class="contact">
+                    <span class="contact__container">
+                        <img class="contact__icon" src="images/phone.png" alt="telefon"/>
+                        <a class="contact__text" href="tel:+48618938392">+48 618 938 392</a>
+                    </span>
+                    <span class="contact__container">
+                        <img class="contact__icon" src="images/mail.png" alt="e-mail"/>
+                        <a class="contact__text" href="mailto:office@predictes.com">office@predictes.com</a>
+                    </span>
+                </div>
+
+                <div class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <div class="menu__item--submenu">
+                                <span class="menu__text menu__text--default" onclick="mobileSubmenuSwitch()">O FIRMIE</span>
+                                <ul class="submenu" id="submenu--js">
+                                    <li class="submenu__item"><a class="submenu__text" href="#">O nas</a>
+                                    <li class="submenu__item"><a class="submenu__text" href="#">Historia</a>
+                                    <li class="submenu__item"><a class="submenu__text" href="#">Zespó³</a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item"><a class="menu__text" href="#">REALIZACJE</a></li>
+                        <li class="menu__item"><a class="menu__text" href="#">BLOG</a></li>
+                        <li class="menu__item"><a class="menu__text" href="#">PARTNERZY</a></li>
+                        <li class="menu__item"><a class="menu__text" href="#">KONTAKT</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="content" id="content--js">
+        
+        <div class="slider"></div>
+    
+    </div>
+    
+</body>
+
+<script>
+function mobileMenuSwitch() {
+    var headerContent = document.getElementById("header__content--js");
+    var content = document.getElementById("content--js");
+    var hamburger = document.getElementById("hamburger--js");
+    if (headerContent.className === "header__content") {
+            headerContent.className += " header__content--switch";
+            content.className += " content--opacity";
+            hamburger.className += " hamburger--clicked";
+            document.addEventListener("click", function(event) {
+                if (event.target.closest(".hamburger")) return;
+                if (event.target.closest(".header__content")) return;
+                headerContent.className = "header__content";
+                content.className = "content";
+                hamburger.className = "hamburger";
+            });
+    } else {
+        headerContent.className = "header__content";
+        content.className = "content";
+        hamburger.className = "hamburger";
+    }
+}
+
+function mobileSubmenuSwitch () {
+    var submenu = document.getElementById("submenu--js");
+    if (submenu.className === "submenu") {
+        submenu.className += " submenu--switch";
+    }
+    else {
+        submenu.className = "submenu";
+    }
+}
+</script>
+
+</html>

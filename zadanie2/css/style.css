@@ -1,0 +1,58 @@
+#home {
+      width: 350px;
+      height: 350px;
+      background-size: auto 350px;
+      background-repeat: no-repeat;
+      background-color: lightgrey;
+      background-position: center center;
+      padding: 0;
+      margin: 03;
+
+    }
+    
+    button {
+      background-color: green;
+      color: white;
+      border: none;
+      bottom: 0;
+      height: 30px;
+      font-size: 12pt;
+      width: 90px;
+      margin: 10px 0 0 0;
+    }
+    button:hover {
+      background-color: orange;
+    }
+
+    button:disabled {
+      background-color: grey;
+    }
+
+    p, span {
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 14px;
+      width: 450px;
+      margin: 18px 0 5px 8px;
+    }
+
+    .game {
+      margin: 0 auto;
+    }
+    
+    .board {
+        position: absolute;
+        left: 20px;
+        top: 360px;
+    }
+    
+    .settings {
+        position: absolute;
+        left: 400px;
+        top: 0;
+    }
+    
+    .settings--hidden {
+        visibility: hidden;
+    }
+
